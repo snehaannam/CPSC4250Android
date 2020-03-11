@@ -13,6 +13,7 @@ import java.util.UUID;
  * TODO: Replace all uses of this class before publishing your app.
  */
 public class ItemViewModel {
+
     /**
      * An array of sample (dummy) items.
      */
@@ -27,7 +28,7 @@ public class ItemViewModel {
 
     static {
         // Add some sample items.
-        addItem(new ItemModel("Gold Sword", "Really Sharp", 1, 1, 1, "sword2"));
+        addItem(new ItemModel("Gold Sword", "Really Sharp", 1, 1, 1,"sword2"));
         addItem(new ItemModel("Strong Shield", "Good and Strong", 0, 0, 2,"shield4a"));
         addItem(new ItemModel("Bunny Hat", "I Live for speed", 0, 0, 3,"hat1"));
     }
@@ -49,7 +50,6 @@ public class ItemViewModel {
         public final String id = UUID.randomUUID().toString();
         public final String Guid = id;
         public final String ImageURI;
-
 
         public ItemModel(String name,
                          String description,
