@@ -26,27 +26,14 @@ public class ItemViewModel {
 
     static {
         // Add some sample items.
-        for (int i = 1; i <= COUNT; i++) {
-            addItem(createItemModel(i));
-        }
+        addItem(new ItemModel("Gold Sword", "Really Sharp", 1, 1, 1, "sword2"));
+        addItem(new ItemModel("Strong Shield", "Good and Strong", 0, 0, 2,"shield4a"));
+        addItem(new ItemModel("Bunny Hat", "I Live for speed", 0, 0, 3,"hat1"));
     }
 
     private static void addItem(ItemModel item) {
         ITEMS.add(item);
         ITEM_MAP.put(item.id, item);
-    }
-
-    private static ItemModel createItemModel(int position) {
-        return new ItemModel(String.valueOf(position), "Item " + position, makeDetails(position));
-    }
-
-    private static String makeDetails(int position) {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Details about Item: ").append(position);
-        for (int i = 0; i < position; i++) {
-            builder.append("\nMore details information here.");
-        }
-        return builder.toString();
     }
 
     /**
