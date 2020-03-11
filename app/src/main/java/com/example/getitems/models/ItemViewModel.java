@@ -1,10 +1,11 @@
-package com.example.getitems.model;
+package com.example.getitems.models;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+
 
 /**
  * Helper class for providing sample content for user interfaces created by
@@ -28,9 +29,9 @@ public class ItemViewModel {
 
     static {
         // Add some sample items.
-        addItem(new ItemModel("Muffler", "Protects against heat and cold", 1, 1, 1,"muffler"));
-        addItem(new ItemModel("Ring of Blocking", "Creates a wall of blocking", 0, 0, 2,"ring_of_blocking"));
-        addItem(new ItemModel("Warm Sock", "Protects against ice and fire attacks", 0, 0, 3,"warm_sock"));
+        addItem(new ItemModel("Muffler", "Protects against heat and cold", 1, 1, 1,"muffler",ItemLocationEnum.Necklass));
+        addItem(new ItemModel("Ring of Blocking", "Creates a wall of blocking", 0, 0, 2,"ring_of_blocking",ItemLocationEnum.RightFinger));
+        addItem(new ItemModel("Warm Sock", "Protects against ice and fire attacks", 0, 0, 3,"warm_sock",ItemLocationEnum.Feet));
     }
 
     private static void addItem(ItemModel item) {
@@ -50,19 +51,22 @@ public class ItemViewModel {
         public final String id = UUID.randomUUID().toString();
         public final String Guid = id;
         public final String ImageURI;
+        public final ItemLocationEnum Location;
 
         public ItemModel(String name,
                          String description,
                          int range,
                          int damage,
                          int value,
-                         String uri) {
+                         String uri,
+                         ItemLocationEnum location) {
             this.Name = name;
             this.Description = description;
             this.Range = range;
             this.Damage  = damage;
             this.Value = value;
             this.ImageURI = uri;
+            this.Location = location;
         }
 
         @Override

@@ -25,7 +25,7 @@ public enum ItemLocationEnum {
             case Head:
                 return "Head";
             case Necklass:
-                return "Necklass";
+                return "Neck";
             case PrimaryHand:
                 return "PrimaryHand";
             case OffHand:
