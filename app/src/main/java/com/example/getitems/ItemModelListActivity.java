@@ -17,7 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.getitems.Model.ItemViewModel;
+import com.example.getitems.model.ItemViewModel;
 
 import java.util.List;
 

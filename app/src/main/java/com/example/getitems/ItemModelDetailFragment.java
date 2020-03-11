@@ -2,7 +2,6 @@ package com.example.getitems;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
@@ -13,10 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.getitems.Model.ItemViewModel;
+import com.example.getitems.model.ItemViewModel;
 
 /**
  * A fragment representing a single ItemModel detail screen.
