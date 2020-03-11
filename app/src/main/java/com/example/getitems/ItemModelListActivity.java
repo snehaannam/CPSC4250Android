@@ -3,18 +3,21 @@ package com.example.getitems;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.getitems.Model.DummyContent;
+import com.example.getitems.Model.ItemViewModel;
 
 import java.util.List;
 
@@ -66,19 +69,19 @@ public class ItemModelListActivity extends AppCompatActivity {
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {
-        recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(this, DummyContent.ITEMS, mTwoPane));
+        recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(this, ItemViewModel.ITEMS, mTwoPane));
     }
 
     public static class SimpleItemRecyclerViewAdapter
             extends RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder> {
 
         private final ItemModelListActivity mParentActivity;
-        private final List<DummyContent.DummyItem> mValues;
+        private final List<ItemViewModel.ItemModel> mValues;
         private final boolean mTwoPane;
         private final View.OnClickListener mOnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DummyContent.DummyItem item = (DummyContent.DummyItem) view.getTag();
+                ItemViewModel.ItemModel item = (ItemViewModel.ItemModel) view.getTag();
                 if (mTwoPane) {
                     Bundle arguments = new Bundle();
                     arguments.putString(ItemModelDetailFragment.ARG_ITEM_ID, item.id);
@@ -98,7 +101,7 @@ public class ItemModelListActivity extends AppCompatActivity {
         };
 
         SimpleItemRecyclerViewAdapter(ItemModelListActivity parent,
-                                      List<DummyContent.DummyItem> items,
+                                      List<ItemViewModel.ItemModel> items,
                                       boolean twoPane) {
             mValues = items;
             mParentActivity = parent;
@@ -114,8 +117,8 @@ public class ItemModelListActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(final ViewHolder holder, int position) {
-            holder.mIdView.setText(mValues.get(position).id);
-            holder.mContentView.setText(mValues.get(position).content);
+            holder.mIdView.setText(mValues.get(position).Name);
+            holder.mContentView.setText(String.valueOf(mValues.get(position).Value));
 
             holder.itemView.setTag(mValues.get(position));
             holder.itemView.setOnClickListener(mOnClickListener);
