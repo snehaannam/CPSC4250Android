@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.getitems.model.ItemViewModel;
+import com.example.getitems.models.ItemViewModel;
 
 /**
  * A fragment representing a single ItemModel detail screen.
@@ -83,6 +83,8 @@ public class ItemModelDetailFragment extends Fragment {
             ((TextView) rootView.findViewById(R.id.ItemDetails_RangeValue)).setText(String.valueOf(mItem.Range));
             ((TextView) rootView.findViewById(R.id.ItemDetails_ValueValue)).setText(String.valueOf(mItem.Value));
             ((TextView) rootView.findViewById(R.id.ItemDetails_DamageValue)).setText(String.valueOf(mItem.Damage));
+            ((TextView) rootView.findViewById(R.id.ItemDetails_LocationValue)).setText(String.valueOf(mItem.Location));
+            ((TextView) rootView.findViewById(R.id.ItemDetails_AttributeValue)).setText(String.valueOf(mItem.Attribute));
         }
 
         return rootView;
