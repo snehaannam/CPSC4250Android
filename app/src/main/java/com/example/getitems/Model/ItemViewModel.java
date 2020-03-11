@@ -28,9 +28,9 @@ public class ItemViewModel {
 
     static {
         // Add some sample items.
-        addItem(new ItemModel("Muffler", "Really Sharp", 1, 1, 1,"muffler"));
-        addItem(new ItemModel("Ring of Blocking", "Good and Strong", 0, 0, 2,"ring_of_blocking"));
-        addItem(new ItemModel("Warm Sock", "I Live for speed", 0, 0, 3,"warm_sock"));
+        addItem(new ItemModel("Muffler", "Protects against heat and cold", 1, 1, 1,"muffler"));
+        addItem(new ItemModel("Ring of Blocking", "Creates a wall of blocking", 0, 0, 2,"ring_of_blocking"));
+        addItem(new ItemModel("Warm Sock", "Protects against ice and fire attacks", 0, 0, 3,"warm_sock"));
     }
 
     private static void addItem(ItemModel item) {
