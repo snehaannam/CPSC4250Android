@@ -53,14 +53,28 @@ public class ItemViewModel {
      * A dummy item representing a piece of content.
      */
     public static class ItemModel {
-        public final String id;
-        public final String content;
-        public final String details;
+        public final int Range;
+        public final int Damage;
+        public final int Value;
+        public final String Name;
+        public final String Description;
+        public final String id = UUID.randomUUID().toString();
+        public final String Guid = id;
+        public final String ImageURI;
 
-        public ItemModel(String id, String content, String details) {
-            this.id = id;
-            this.content = content;
-            this.details = details;
+
+        public ItemModel(String name,
+                         String description,
+                         int range,
+                         int damage,
+                         int value,
+                         String uri) {
+            this.Name = name;
+            this.Description = description;
+            this.Range = range;
+            this.Damage  = damage;
+            this.Value = value;
+            this.ImageURI = uri;
         }
 
         @Override
