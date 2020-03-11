@@ -16,7 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.getitems.models.ItemViewModel;
+import com.example.getitems.Model.ItemViewModel;
 
 /**
  * A fragment representing a single ItemModel detail screen.
@@ -57,15 +57,6 @@ public class ItemModelDetailFragment extends Fragment {
             CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
                 appBarLayout.setTitle(mItem.Name);
-
-                // The id on the layout
-                ImageView image = ((ImageView) activity.findViewById(R.id.itemmodel_URI));
-
-                // Get the image from the drawable folder
-                String uri = "@drawable/" + mItem.ImageURI;  // where myresource (without the extension) is the file
-                int imageResource = getResources().getIdentifier(uri, "drawable", "com.example.getitems");
-                Drawable res = getResources().getDrawable(imageResource);
-                image.setImageDrawable(res);
             }
 
         }
@@ -85,7 +76,6 @@ public class ItemModelDetailFragment extends Fragment {
             ((TextView) rootView.findViewById(R.id.ItemDetails_RangeValue)).setText(String.valueOf(mItem.Range));
             ((TextView) rootView.findViewById(R.id.ItemDetails_ValueValue)).setText(String.valueOf(mItem.Value));
             ((TextView) rootView.findViewById(R.id.ItemDetails_DamageValue)).setText(String.valueOf(mItem.Damage));
-            ((TextView) rootView.findViewById(R.id.ItemDetails_LocationValue)).setText(mItem.Location.toString());
         }
 
         return rootView;
