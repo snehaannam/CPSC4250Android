@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="pageBackgroundcolor">#D9C6B0</color>
-    <color name="viewBackgroundcolor">#BF895A</color>
-    <color name="navigationBarcolor">#D9C6B0</color>
+    <color name="pageBackgroundcolor">#B6E8FD</color>
+    <color name="viewBackgroundcolor">#73BBFF</color>
+    <color name="navigationBarcolor">#5DD4E8</color>
 
-    <color name="primaryBackgroundcolor">#D9C6B0</color>
-    <color name="secondaryBackgroundcolor">#BF895A</color>
-    <color name="triciaryBackgroundcolor">#733612</color>
-    <color name="lightBackgroundcolor">#FFE4C4</color>
+    <color name="primaryBackgroundcolor">#B6E8FD</color>
+    <color name="secondaryBackgroundcolor">#73BBFF</color>
+    <color name="triciaryBackgroundcolor">#5DD4E8</color>
+    <color name="lightBackgroundcolor">#B6E8FD</color>
 
-    <color name="primaryTextcolor">#400D01</color>
-    <color name="secondaryTextcolor">#8C3D20</color>
-    <color name="triciaryTextcolor">#733612</color>
+    <color name="primaryTextcolor">#FFFFFF</color>
+    <color name="secondaryTextcolor">#000000</color>
+    <color name="triciaryTextcolor">#000000</color>
 
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#BB86FC</color>
 </resources>
